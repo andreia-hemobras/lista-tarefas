@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eeeeee;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+header {
+    height: 50px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+input {
+    height: 100%;
+    width: 80%;
+    font-size: 1.5rem;
+    padding-left: 5%;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+button.add {
+    background-color: green;
+    color: white;
+    font-size: 1rem;
+    height: 100%;
+    width: 20%;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 0 20px #ccc;
+    margin-bottom: 1%;
+    cursor: pointer;
+}
+
+.item-icon {
+    flex: 20%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.item-name {
+    flex: 65%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item-button {
+    flex: 15%;
+}
+
+.item.clicked {
+    background-color: rgb(201, 230, 201);
+}
+
+.item.clicked .item-name {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    height: 80px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
