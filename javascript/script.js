@@ -1,6 +1,7 @@
 let taskInput = document.getElementById("task-input");
 let addButton = document.getElementById("btn-add");
-let listArea = document.getElementById("list-area")
+let nonCheckedArea = document.getElementById("non-checked-area")
+let checkedArea = document.getElementById("checked-area")
 
 let taskCounter = 0;
 
@@ -22,7 +23,7 @@ function addTask() {
             </div>
         `;
 
-        listArea.innerHTML += newTask;
+        nonCheckedArea.innerHTML += newTask;
         taskInput.value = "";
         taskInput.focus();
     }
@@ -42,11 +43,11 @@ function markTask(id) {
     if (taskClass === "item") {
         task.classList.add("clicked");
         icon.innerText = "check_circle";
-        task.parentNode.appendChild(task);
+        checkedArea.appendChild(task);
     } else {
         task.classList.remove("clicked");
         icon.innerText = "circle";
-        task.parentNode.prepend(task);
+        nonCheckedArea.appendChild(task);
     }
 }
 
